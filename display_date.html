@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Date</title>
+</head>
+<body>
+    <h1>Today's Date</h1>
+    <button onclick="displayCurrentDate()">Display</button>
+    <input disabled id="date"></input>
+</body>
+<script>
+    
+    function displayCurrentDate() {
+        const currentDate = new Date();
+        const formattedDate = currentDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        document.getElementById('date').value = formattedDate;
+        console.log(`Current Date: ${formattedDate}`);
+    }
+
+    
+</script>
+</html>

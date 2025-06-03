@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facebook</title>
+  <style>
+    body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f0f2f5; }
+    .container { text-align: center; }
+    .logo { font-size: 40px; color: #1877f2; font-weight: bold; }
+    .login-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 300px; }
+    input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
+    button { width: 100%; padding: 10px; background: #1877f2; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #165eab; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">Facebook</div>
+    <div class="login-box">
+      <input type="text" id="email" placeholder="Email or Phone">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Log In</button>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      let email = document.getElementById('email').value;
+      let password = document.getElementById('password').value;
+      if (email && password) {
+        alert(`Logging in with ${email}`);
+      } else {
+        alert('Please fill in all fields.');
+      }
+    }
+  </script>
+</body>
+</html>

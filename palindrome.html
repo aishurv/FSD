@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Palindrome Checker</title>
+</head>
+<body>
+  <button onclick="checkPalindrome()">Check Palindrome</button>
+
+  <script>
+    function checkPalindrome() {
+      let n = prompt("Enter a number:");
+      if (isNaN(n)) {
+        alert("Please enter a valid number.");
+        return;
+      }
+      let str = n.toString();
+      let isPalindrome = str === str.split("").reverse().join("");
+      alert(`${n} is ${isPalindrome ? "" : "not "}a palindrome.`);
+    }
+  </script>
+</body>
+</html>
